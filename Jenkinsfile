@@ -1,11 +1,23 @@
-node {
-	stage('Build') {
-		echo "Build"
-	}
-	stage('Test') {
-		echo "Test"
-	}
-	stage('IntTest'){
-		echo "IntTest"
+pipeline {
+
+	agent any
+	stages {
+		stage('Build'){
+			steps {
+				echo "build"
+			}
+		}
+
+		stage('Test'){
+			steps {
+				echo "test"
+			}
+		}
+
+		stage('IntTest'){
+			steps {
+				echo "IntTest"
+			}
+		}
 	}
 }
